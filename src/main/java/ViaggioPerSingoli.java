@@ -1,14 +1,19 @@
 public class ViaggioPerSingoli extends Viaggio
 {  
-    public ViaggioPerSingoli(String titolo, double costo, Giorno lista) 
+    public ViaggioPerSingoli(String titolo, double costo) 
     {
-        super(titolo, costo, lista);
+        super(titolo, costo);
     }
+
+     public double Prezzo() 
+    {
+         int i = 0;
+         double costobase = 350;
+         double importo = 0;
+         
+         
+        return importo = costobase + (40 * contenitoregiorni.size());        
+    }  
     
-    public double Prezzo()
-    {
-        double prezzo = 0;
-        
-        prezzo = 350 + 40 * 
-    }
+    
 }

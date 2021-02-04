@@ -1,11 +1,19 @@
 public class ViaggioPerGruppi extends Viaggio
 {
-    public ViaggioPerGruppi(String titolo, double costo, Giorno lista) 
+    private int componenti;
+    public ViaggioPerGruppi(String titolo, double costo, int componenti) 
     {
-        super(titolo, costo, lista);
+        super(titolo, costo);
+        this.componenti = componenti;
     }
-    
-    public double Prezzo()
-    {  
-    }
+
+    public double Prezzo() 
+    {
+         int i = 0;
+         double costobase = 120;
+         double importo = 0;
+         
+         
+        return importo = costobase + (25 * contenitoregiorni.size()) + (4 * componenti);        
+    }     
 }

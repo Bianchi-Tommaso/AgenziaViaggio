@@ -5,13 +5,15 @@ public class Agenzia
 {
     private String nome;
     private int elenco;
-   
+    private int componenti;
+    
     ArrayList<Viaggio> contenitoreviaggio = new ArrayList<Viaggio>();
     
-    public Agenzia(String nome, int elenco) 
+    public Agenzia(String nome, int elenco, int componenti) 
     {
         this.nome = nome;
         this.elenco = elenco;
+        
     }
     
     public void AggiungiViaggio(Viaggio x)
@@ -40,9 +42,8 @@ public class Agenzia
     {
         int i = 0;
         int j = 0;
-        Giorno g = null;
-        ViaggioPerSingoli vps = new ViaggioPerSingoli("", 0, g);
-        ViaggioPerGruppi vpg = new ViaggioPerGruppi("", 0, g);
+        ViaggioPerSingoli vps = new ViaggioPerSingoli("", 0);
+        ViaggioPerGruppi vpg = new ViaggioPerGruppi("", 0, 0);
         
         for(i = 0; i < contenitoreviaggio.size(); i++)
         {
@@ -51,14 +52,19 @@ public class Agenzia
                 if(x instanceof ViaggioPerSingoli)
                 {       
                    vps = (ViaggioPerSingoli) x;
-                   vps.Prezzo();
+                   System.out.println(vps.Prezzo());
                 }
                 else
                 {
                    vpg = (ViaggioPerGruppi) x;
-                   vpg.Prezzo();
+                   System.out.println(vpg.Prezzo());
                 }
             }
         }                
+    }
+    
+    public void ListaViaggi()
+    {
+        
     }
 }

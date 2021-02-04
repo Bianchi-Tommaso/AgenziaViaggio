@@ -1,18 +1,17 @@
 
 import java.util.ArrayList;
 
-public class Viaggio 
+public abstract class Viaggio 
 {
     protected String titolo;
     protected double costo;
-    protected Giorno lista;
-    protected final int quotafissa = 10; 
+    protected static int quotafissa = 10; 
     ArrayList<Giorno> contenitoregiorni = new ArrayList<Giorno>();
     
-    public Viaggio(String titolo, double costo, Giorno lista) {
+    public Viaggio(String titolo, double costo)
+    {
         this.titolo = titolo;
         this.costo = costo;
-        this.lista = lista;
     }
     
     public void AggiungiGiorno(Giorno x)
@@ -36,6 +35,7 @@ public class Viaggio
         else
             System.out.println("Il Giorno Non E' Presente");
     }
+    public abstract double Prezzo();
     
     public String getTitolo() 
     {
@@ -56,16 +56,4 @@ public class Viaggio
     {
         this.costo = costo;
     }
-
-    public Giorno getLista() 
-    {
-        return lista;
-    }
-
-    public void setLista(Giorno lista) 
-    {
-        this.lista = lista;
-    }
-    
-    
 }
