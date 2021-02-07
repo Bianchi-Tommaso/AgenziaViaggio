@@ -14,6 +14,13 @@ public class ViaggioPerGruppi extends Viaggio
          double importo = 0;
          
          
-        return importo = costobase + (25 * contenitoregiorni.size()) + (4 * componenti);        
-    }     
+        return importo = costo + costobase + (25 * contenitoregiorni.size()) + (4 * componenti);        
+    } 
+
+    public int getComponenti() 
+    {
+        return componenti;
+    }
+
+    
 }

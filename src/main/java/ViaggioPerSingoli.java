@@ -12,8 +12,9 @@ public class ViaggioPerSingoli extends Viaggio
          double importo = 0;
          
          
-        return importo = costobase + (40 * contenitoregiorni.size());        
+        return importo = costo + costobase + (40 * contenitoregiorni.size());        
     }  
     
+     
     
 }

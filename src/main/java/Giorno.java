@@ -11,6 +11,13 @@ public class Giorno
         this.descrizione = descrizione;
     }
 
+    public String toString()
+    {
+        String str = "Il Numero Ordine E': " + numeroOrdine + " Il Luogo: " + luogo + "Descrizione: " + descrizione;
+        
+        return str;
+    }
+    
     public int getNumeroOrdine() 
     {
         return numeroOrdine;
